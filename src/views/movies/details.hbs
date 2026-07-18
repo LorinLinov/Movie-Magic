@@ -25,11 +25,32 @@
                             <p class="disc">Description: {{movie.description}}</p>
                                 <p class="card-category">Category: {{movie.category}}</p>
                         </div>
+
+                        <div>
+                            <a href="/movies/artist-attach/{{movie.id}}" class="details">Add cast</a>
+                        </div>
+                        
                     </div>
                     <div class="card_right">
                         <img src="{{movie.imageUrl}}"
                             alt="image">
                     </div>
                 </div>
+                {{#each artists}}
+                <div class="main-cast-card">
+                    <div class="cast-card">
+                        <div class="card-img">
+                            <img src="{{imageUrl}}"
+                                alt="cast">
+                        </div>
+                        <div class="cast-info">
+                            <h1>{{name}}</h1>
+                            <h3>Age: {{age}}</h3>
+                            <h3>Born: {{born}}</h3>
+                            <h3>Name in Movie: n/d</h3>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
 
             </section>
